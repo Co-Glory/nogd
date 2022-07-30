@@ -5,7 +5,7 @@ import 'package:geeks_service/service/logger.dart';
 class DioFactory {
   const DioFactory(this.dio);
   final Dio dio;
-  (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
+  (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
              (HttpClient dioClient) {
            dioClient.badCertificateCallback =
                ((X509Certificate cert, String host, int port) => true);
