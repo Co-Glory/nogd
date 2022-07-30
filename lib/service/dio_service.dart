@@ -5,12 +5,6 @@ import 'package:geeks_service/service/logger.dart';
 class DioFactory {
   const DioFactory(this.dio);
   final Dio dio;
-  (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
-             (HttpClient dioClient) {
-           dioClient.badCertificateCallback =
-               ((X509Certificate cert, String host, int port) => true);
-           return dioClient;
-         };
   ///
   ///@param {notRequiresTokenKey}
   ///this key is used to check if the request is not requires token
