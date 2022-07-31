@@ -33,12 +33,12 @@ class DioFactory {
         InterceptorsWrapper(onRequest: (RequestOptions options, handler) async {
       if (options.headers.containsKey(hasToken)) {
         options.headers.addAll({'Authorization': 'Bearer $token'});
-        'Has Token ✅ ='.logD('Token 👌');
+        'Has Token ✅ $token ✅'.logI('Token 👌');
         return handler.next(options);
       } else {
         options.headers.remove(hasToken);
         options.headers;
-        'Without Token 😁'.logD();
+        'Without Token 😁'.logI();
         return handler.next(options);
       }
     }));
