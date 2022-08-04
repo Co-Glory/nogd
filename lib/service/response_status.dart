@@ -6,6 +6,7 @@ part 'response_status.freezed.dart';
 @freezed
 class ResponseStatus with _$ResponseStatus {
   const factory ResponseStatus.initial() = Initial;
+  const factory ResponseStatus.noInternetC() = NoInternetC;
 
   const factory ResponseStatus.loading() = Loading;
 

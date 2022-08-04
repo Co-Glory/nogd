@@ -19,6 +19,7 @@ mixin _$ResponseStatus {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
@@ -27,6 +28,7 @@ mixin _$ResponseStatus {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -35,6 +37,7 @@ mixin _$ResponseStatus {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -44,6 +47,7 @@ mixin _$ResponseStatus {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
+    required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(ErrorDetails value) error,
@@ -52,6 +56,7 @@ mixin _$ResponseStatus {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -60,6 +65,7 @@ mixin _$ResponseStatus {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -124,6 +130,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
@@ -135,6 +142,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -146,6 +154,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -161,6 +170,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
+    required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(ErrorDetails value) error,
@@ -172,6 +182,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -183,6 +194,7 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -197,6 +209,129 @@ class _$Initial implements Initial {
 
 abstract class Initial implements ResponseStatus {
   const factory Initial() = _$Initial;
+}
+
+/// @nodoc
+abstract class _$$NoInternetCCopyWith<$Res> {
+  factory _$$NoInternetCCopyWith(
+          _$NoInternetC value, $Res Function(_$NoInternetC) then) =
+      __$$NoInternetCCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NoInternetCCopyWithImpl<$Res>
+    extends _$ResponseStatusCopyWithImpl<$Res>
+    implements _$$NoInternetCCopyWith<$Res> {
+  __$$NoInternetCCopyWithImpl(
+      _$NoInternetC _value, $Res Function(_$NoInternetC) _then)
+      : super(_value, (v) => _then(v as _$NoInternetC));
+
+  @override
+  _$NoInternetC get _value => super._value as _$NoInternetC;
+}
+
+/// @nodoc
+
+class _$NoInternetC implements NoInternetC {
+  const _$NoInternetC();
+
+  @override
+  String toString() {
+    return 'ResponseStatus.noInternetC()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NoInternetC);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() noInternetC,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function(String? message) error,
+  }) {
+    return noInternetC();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? noInternetC,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String? message)? error,
+  }) {
+    return noInternetC?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? noInternetC,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function(String? message)? error,
+    required TResult orElse(),
+  }) {
+    if (noInternetC != null) {
+      return noInternetC();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(NoInternetC value) noInternetC,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(ErrorDetails value) error,
+  }) {
+    return noInternetC(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(ErrorDetails value)? error,
+  }) {
+    return noInternetC?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(ErrorDetails value)? error,
+    required TResult orElse(),
+  }) {
+    if (noInternetC != null) {
+      return noInternetC(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NoInternetC implements ResponseStatus {
+  const factory NoInternetC() = _$NoInternetC;
 }
 
 /// @nodoc
@@ -238,6 +373,7 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
@@ -249,6 +385,7 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -260,6 +397,7 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -275,6 +413,7 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
+    required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(ErrorDetails value) error,
@@ -286,6 +425,7 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -297,6 +437,7 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -352,6 +493,7 @@ class _$Success implements Success {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
@@ -363,6 +505,7 @@ class _$Success implements Success {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -374,6 +517,7 @@ class _$Success implements Success {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -389,6 +533,7 @@ class _$Success implements Success {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
+    required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(ErrorDetails value) error,
@@ -400,6 +545,7 @@ class _$Success implements Success {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -411,6 +557,7 @@ class _$Success implements Success {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -493,6 +640,7 @@ class _$ErrorDetails implements ErrorDetails {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
     required TResult Function(String? message) error,
@@ -504,6 +652,7 @@ class _$ErrorDetails implements ErrorDetails {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -515,6 +664,7 @@ class _$ErrorDetails implements ErrorDetails {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
     TResult Function(String? message)? error,
@@ -530,6 +680,7 @@ class _$ErrorDetails implements ErrorDetails {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
+    required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(ErrorDetails value) error,
@@ -541,6 +692,7 @@ class _$ErrorDetails implements ErrorDetails {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
@@ -552,6 +704,7 @@ class _$ErrorDetails implements ErrorDetails {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
+    TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(ErrorDetails value)? error,
