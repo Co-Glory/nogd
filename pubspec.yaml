@@ -10,13 +10,18 @@ environment:
 dependencies:
   dio: ^4.0.6
   logger: ^1.1.0
+  freezed_annotation: ^2.1.0
+
   flutter:
     sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
+  build_runner: ^2.2.0
+  freezed: ^2.1.0+1
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
