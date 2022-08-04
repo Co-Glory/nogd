@@ -12,5 +12,5 @@ class ResponseStatus with _$ResponseStatus {
 
   const factory ResponseStatus.success() = Success;
 
-  const factory ResponseStatus.failure([String? message]) = Failure;
+  const factory ResponseStatus.error([String? message]) = ErrorDetails;
 }
