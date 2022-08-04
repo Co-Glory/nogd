@@ -22,7 +22,7 @@ mixin _$ResponseStatus {
     required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(String? message) error,
+    required TResult Function(String? message) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +31,7 @@ mixin _$ResponseStatus {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +40,7 @@ mixin _$ResponseStatus {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ mixin _$ResponseStatus {
     required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
-    required TResult Function(ErrorDetails value) error,
+    required TResult Function(Failure value) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,7 +59,7 @@ mixin _$ResponseStatus {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,7 +68,7 @@ mixin _$ResponseStatus {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,7 +133,7 @@ class _$Initial implements Initial {
     required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(String? message) error,
+    required TResult Function(String? message) failure,
   }) {
     return initial();
   }
@@ -145,7 +145,7 @@ class _$Initial implements Initial {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
   }) {
     return initial?.call();
   }
@@ -157,7 +157,7 @@ class _$Initial implements Initial {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -173,7 +173,7 @@ class _$Initial implements Initial {
     required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
-    required TResult Function(ErrorDetails value) error,
+    required TResult Function(Failure value) failure,
   }) {
     return initial(this);
   }
@@ -185,7 +185,7 @@ class _$Initial implements Initial {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
   }) {
     return initial?.call(this);
   }
@@ -197,7 +197,7 @@ class _$Initial implements Initial {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -256,7 +256,7 @@ class _$NoInternetC implements NoInternetC {
     required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(String? message) error,
+    required TResult Function(String? message) failure,
   }) {
     return noInternetC();
   }
@@ -268,7 +268,7 @@ class _$NoInternetC implements NoInternetC {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
   }) {
     return noInternetC?.call();
   }
@@ -280,7 +280,7 @@ class _$NoInternetC implements NoInternetC {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
     required TResult orElse(),
   }) {
     if (noInternetC != null) {
@@ -296,7 +296,7 @@ class _$NoInternetC implements NoInternetC {
     required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
-    required TResult Function(ErrorDetails value) error,
+    required TResult Function(Failure value) failure,
   }) {
     return noInternetC(this);
   }
@@ -308,7 +308,7 @@ class _$NoInternetC implements NoInternetC {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
   }) {
     return noInternetC?.call(this);
   }
@@ -320,7 +320,7 @@ class _$NoInternetC implements NoInternetC {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
     required TResult orElse(),
   }) {
     if (noInternetC != null) {
@@ -376,7 +376,7 @@ class _$Loading implements Loading {
     required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(String? message) error,
+    required TResult Function(String? message) failure,
   }) {
     return loading();
   }
@@ -388,7 +388,7 @@ class _$Loading implements Loading {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
   }) {
     return loading?.call();
   }
@@ -400,7 +400,7 @@ class _$Loading implements Loading {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -416,7 +416,7 @@ class _$Loading implements Loading {
     required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
-    required TResult Function(ErrorDetails value) error,
+    required TResult Function(Failure value) failure,
   }) {
     return loading(this);
   }
@@ -428,7 +428,7 @@ class _$Loading implements Loading {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
   }) {
     return loading?.call(this);
   }
@@ -440,7 +440,7 @@ class _$Loading implements Loading {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -496,7 +496,7 @@ class _$Success implements Success {
     required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(String? message) error,
+    required TResult Function(String? message) failure,
   }) {
     return success();
   }
@@ -508,7 +508,7 @@ class _$Success implements Success {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
   }) {
     return success?.call();
   }
@@ -520,7 +520,7 @@ class _$Success implements Success {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -536,7 +536,7 @@ class _$Success implements Success {
     required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
-    required TResult Function(ErrorDetails value) error,
+    required TResult Function(Failure value) failure,
   }) {
     return success(this);
   }
@@ -548,7 +548,7 @@ class _$Success implements Success {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
   }) {
     return success?.call(this);
   }
@@ -560,7 +560,7 @@ class _$Success implements Success {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -575,29 +575,26 @@ abstract class Success implements ResponseStatus {
 }
 
 /// @nodoc
-abstract class _$$ErrorDetailsCopyWith<$Res> {
-  factory _$$ErrorDetailsCopyWith(
-          _$ErrorDetails value, $Res Function(_$ErrorDetails) then) =
-      __$$ErrorDetailsCopyWithImpl<$Res>;
+abstract class _$$FailureCopyWith<$Res> {
+  factory _$$FailureCopyWith(_$Failure value, $Res Function(_$Failure) then) =
+      __$$FailureCopyWithImpl<$Res>;
   $Res call({String? message});
 }
 
 /// @nodoc
-class __$$ErrorDetailsCopyWithImpl<$Res>
-    extends _$ResponseStatusCopyWithImpl<$Res>
-    implements _$$ErrorDetailsCopyWith<$Res> {
-  __$$ErrorDetailsCopyWithImpl(
-      _$ErrorDetails _value, $Res Function(_$ErrorDetails) _then)
-      : super(_value, (v) => _then(v as _$ErrorDetails));
+class __$$FailureCopyWithImpl<$Res> extends _$ResponseStatusCopyWithImpl<$Res>
+    implements _$$FailureCopyWith<$Res> {
+  __$$FailureCopyWithImpl(_$Failure _value, $Res Function(_$Failure) _then)
+      : super(_value, (v) => _then(v as _$Failure));
 
   @override
-  _$ErrorDetails get _value => super._value as _$ErrorDetails;
+  _$Failure get _value => super._value as _$Failure;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(_$ErrorDetails(
+    return _then(_$Failure(
       message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -608,22 +605,22 @@ class __$$ErrorDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorDetails implements ErrorDetails {
-  const _$ErrorDetails([this.message]);
+class _$Failure implements Failure {
+  const _$Failure([this.message]);
 
   @override
   final String? message;
 
   @override
   String toString() {
-    return 'ResponseStatus.error(message: $message)';
+    return 'ResponseStatus.failure(message: $message)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorDetails &&
+            other is _$Failure &&
             const DeepCollectionEquality().equals(other.message, message));
   }
 
@@ -633,8 +630,8 @@ class _$ErrorDetails implements ErrorDetails {
 
   @JsonKey(ignore: true)
   @override
-  _$$ErrorDetailsCopyWith<_$ErrorDetails> get copyWith =>
-      __$$ErrorDetailsCopyWithImpl<_$ErrorDetails>(this, _$identity);
+  _$$FailureCopyWith<_$Failure> get copyWith =>
+      __$$FailureCopyWithImpl<_$Failure>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -643,9 +640,9 @@ class _$ErrorDetails implements ErrorDetails {
     required TResult Function() noInternetC,
     required TResult Function() loading,
     required TResult Function() success,
-    required TResult Function(String? message) error,
+    required TResult Function(String? message) failure,
   }) {
-    return error(message);
+    return failure(message);
   }
 
   @override
@@ -655,9 +652,9 @@ class _$ErrorDetails implements ErrorDetails {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
   }) {
-    return error?.call(message);
+    return failure?.call(message);
   }
 
   @override
@@ -667,11 +664,11 @@ class _$ErrorDetails implements ErrorDetails {
     TResult Function()? noInternetC,
     TResult Function()? loading,
     TResult Function()? success,
-    TResult Function(String? message)? error,
+    TResult Function(String? message)? failure,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(message);
+    if (failure != null) {
+      return failure(message);
     }
     return orElse();
   }
@@ -683,9 +680,9 @@ class _$ErrorDetails implements ErrorDetails {
     required TResult Function(NoInternetC value) noInternetC,
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
-    required TResult Function(ErrorDetails value) error,
+    required TResult Function(Failure value) failure,
   }) {
-    return error(this);
+    return failure(this);
   }
 
   @override
@@ -695,9 +692,9 @@ class _$ErrorDetails implements ErrorDetails {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
   }) {
-    return error?.call(this);
+    return failure?.call(this);
   }
 
   @override
@@ -707,21 +704,21 @@ class _$ErrorDetails implements ErrorDetails {
     TResult Function(NoInternetC value)? noInternetC,
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
-    TResult Function(ErrorDetails value)? error,
+    TResult Function(Failure value)? failure,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(this);
+    if (failure != null) {
+      return failure(this);
     }
     return orElse();
   }
 }
 
-abstract class ErrorDetails implements ResponseStatus {
-  const factory ErrorDetails([final String? message]) = _$ErrorDetails;
+abstract class Failure implements ResponseStatus {
+  const factory Failure([final String? message]) = _$Failure;
 
   String? get message;
   @JsonKey(ignore: true)
-  _$$ErrorDetailsCopyWith<_$ErrorDetails> get copyWith =>
+  _$$FailureCopyWith<_$Failure> get copyWith =>
       throw _privateConstructorUsedError;
 }
