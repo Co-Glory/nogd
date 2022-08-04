@@ -9,7 +9,7 @@ class Failure implements Exception {
     this.message = ResponseMessage.DEFAULT,
   ]);
   factory Failure.fromCode(dynamic error) {
-    '$error'.logV();
+    // '$error'.logV();
     switch (error.type) {
       case DioErrorType.connectTimeout:
         ResponseMessage.CONNECT_TIMEOUT.logE();

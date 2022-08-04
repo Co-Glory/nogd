@@ -1,15 +1,21 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:geeks_service/service/logger.dart';
 
 class DioFactory {
   const DioFactory(this.dio);
   final Dio dio;
-  ///
-  ///@param {notRequiresTokenKey}
-  ///this key is used to check if the request is not requires token
+
+  /// @param {hasToken}
+  /// this key is used to check if the request is not requires token
+  /// @param {token}
+  /// store key is 'token'.
   Future<Dio> createDio(
-      String baseUrlName, String notRequiresTokenKey, token) async {
+    String baseUrlName,
+    String hasToken,
+    FlutterSecureStorage token,
+  ) async {
     dio
       ..options.contentType = 'application/json; charset=UTF-8'
       ..options.baseUrl = baseUrlName
@@ -29,16 +35,19 @@ class DioFactory {
         ),
       );
     }
+
     dio.interceptors.add(
         InterceptorsWrapper(onRequest: (RequestOptions options, handler) async {
-      if (options.headers.containsKey(notRequiresTokenKey)) {
-        options.headers.remove(notRequiresTokenKey);
-        options.headers;
-        'withoute Token'.logD();
+      if (options.headers.containsKey(hasToken)) {
+        final tokenStore = await token.read(key: 'token');
+
+        options.headers.addAll({'Authorization': 'Bearer $tokenStore'});
+        'Has Token ✅ $tokenStore ✅'.logI('Token 👌');
         return handler.next(options);
       } else {
-        options.headers.addAll({'Authorization': 'Bearer $token'});
-        'with --------- Token'.logD();
+        options.headers.remove(hasToken);
+        options.headers;
+        'Without Token 😁'.logI();
         return handler.next(options);
       }
     }));
